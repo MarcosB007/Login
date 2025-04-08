@@ -8,6 +8,6 @@ namespace Login.Interfaces
 {
     public interface IValidarUsuario
     {
-        void Validar();
+        bool Validar(string user, string password);
     }
 }

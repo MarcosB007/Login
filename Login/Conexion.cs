@@ -10,7 +10,7 @@ namespace Login
 {
     public class Conexion
     {
-        public static void ConectarConDB()
+        public static bool ConectarConDB()
         {
             string cadenaDeConexion = "Server=MARCOS;Database=UsuariosDB;Integrated Security=True;";
 
@@ -19,6 +19,7 @@ namespace Login
                 using (SqlConnection conexion = new SqlConnection(cadenaDeConexion))
                 {
                     conexion.Open();
+                    return true;
                     //Console.WriteLine("Conexion exitosa.");
                     //MessageBox.Show("Conexion exitosa");
 
@@ -28,6 +29,7 @@ namespace Login
             {
                 //Console.WriteLine($"Error al conectar con la base de datos: {ex.Message}");
                 MessageBox.Show($"Error en la conexion {ex.Message}");
+                return false;
             }
         }
     }

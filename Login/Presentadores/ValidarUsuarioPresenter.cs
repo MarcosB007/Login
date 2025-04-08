@@ -9,9 +9,9 @@ namespace Login.Presentadores
 {
     public class ValidarUsuarioPresenter: IValidarUsuario
     {
-        public void Validar()
+        public bool Validar(string user, string password)
         {
-
+            return true;
         }
     }
 }
