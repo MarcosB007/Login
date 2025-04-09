@@ -3,10 +3,10 @@ using Login.Presentadores;
 
 namespace Login
 {
-    public partial class Form1 : Form
+    public partial class LoginView : Form
     {
         ValidarUsuarioPresenter presentador = new ValidarUsuarioPresenter();
-        public Form1()
+        public LoginView()
         {
             InitializeComponent();
         }
@@ -19,7 +19,16 @@ namespace Login
             bool resultadoConexion = Conexion.ConectarConDB();
             if (resultadoConexion)
             {
-                presentador.Validar(usuario, contraseña);
+                bool resultadoConsulta = presentador.Validar(usuario, contraseña);
+                if (resultadoConsulta)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrecta");
+                }
             }
 
         }

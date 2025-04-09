@@ -13,14 +13,14 @@ namespace Login.Presentadores
         public bool Validar(string user, string password)
         {
             string cadenaDeConexion = "Server=MARCOS;Database=UsuariosDB;Integrated Security=True;";
-            string consulta = "SELECT COUNT() FROM Usuarios WHERE Correo = @user AND Contraseña = @password";
+            string consulta = "SELECT COUNT(*) FROM Usuarios WHERE Nombre = @Nombre AND Contraseña = @Contraseña";
 
             using (SqlConnection conexion = new SqlConnection(cadenaDeConexion))
             {
 
                 SqlCommand comando = new SqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@user", user);
-                comando.Parameters.AddWithValue("@password", password);
+                comando.Parameters.AddWithValue("@Nombre", user);
+                comando.Parameters.AddWithValue("@Contraseña", password);
 
                 try
                 {
@@ -31,7 +31,7 @@ namespace Login.Presentadores
                 }
                 catch (Exception)
                 {
-                    return true;
+                    return false;
                 }
             }
 

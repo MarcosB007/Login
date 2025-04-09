@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class Form1
+    partial class LoginView
     {
         /// <summary>
         ///  Required designer variable.
@@ -114,13 +114,13 @@
             btnIngresar.UseVisualStyleBackColor = true;
             btnIngresar.Click += btn_Conectar;
             // 
-            // Form1
+            // LoginView
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(284, 141);
             Controls.Add(tableLayoutPanel1);
-            Name = "Form1";
+            Name = "LoginView";
             Text = "Form1";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
