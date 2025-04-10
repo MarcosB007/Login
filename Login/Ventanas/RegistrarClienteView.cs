@@ -1,4 +1,5 @@
 ﻿using Login.Dominio;
+using Login.Presentadores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,10 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Login.Ventanas
 {
     public partial class RegistrarClienteView : Form
     {
+        AgregarUsuarioPresenter presentador = new AgregarUsuarioPresenter();
         public RegistrarClienteView()
         {
             InitializeComponent();
@@ -32,6 +35,8 @@ namespace Login.Ventanas
             usuario.DNI = dni;
             usuario.Correo = correo;
             usuario.Contraseña = password;
+
+            presentador.AgregarUsuario(usuario);
 
         }
     }

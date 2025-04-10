@@ -10,7 +10,7 @@ namespace Login
 {
     public class Conexion
     {
-        public static bool ConectarConDB()
+        public bool ConectarConDB()
         {
             string cadenaDeConexion = "Server=MARCOS;Database=UsuariosDB;Integrated Security=True;";
 
