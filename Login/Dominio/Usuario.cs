@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Login.Dominio
 {
-    internal class Usuario
+    public class Usuario
     {
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string DNI { get; set; }
+        public string Correo { get; set; }
+        public string Contraseña { get; set; }
+
+
     }
 }

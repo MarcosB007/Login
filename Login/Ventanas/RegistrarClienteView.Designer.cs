@@ -38,7 +38,7 @@
             textBoxNombre = new TextBox();
             textBoxApellido = new TextBox();
             textBoxDNI = new TextBox();
-            textBoxCorre = new TextBox();
+            textBoxCorreo = new TextBox();
             textBoxContraseña = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             btnAgregarUsuario = new Button();
@@ -62,7 +62,7 @@
             tlBase.Controls.Add(textBoxNombre, 1, 1);
             tlBase.Controls.Add(textBoxApellido, 1, 2);
             tlBase.Controls.Add(textBoxDNI, 1, 3);
-            tlBase.Controls.Add(textBoxCorre, 1, 4);
+            tlBase.Controls.Add(textBoxCorreo, 1, 4);
             tlBase.Controls.Add(textBoxContraseña, 1, 5);
             tlBase.Controls.Add(tableLayoutPanel1, 1, 7);
             tlBase.Dock = DockStyle.Fill;
@@ -179,13 +179,13 @@
             textBoxDNI.Size = new Size(462, 25);
             textBoxDNI.TabIndex = 8;
             // 
-            // textBoxCorre
+            // textBoxCorreo
             // 
-            textBoxCorre.Dock = DockStyle.Fill;
-            textBoxCorre.Location = new Point(96, 143);
-            textBoxCorre.Name = "textBoxCorre";
-            textBoxCorre.Size = new Size(462, 25);
-            textBoxCorre.TabIndex = 9;
+            textBoxCorreo.Dock = DockStyle.Fill;
+            textBoxCorreo.Location = new Point(96, 143);
+            textBoxCorreo.Name = "textBoxCorreo";
+            textBoxCorreo.Size = new Size(462, 25);
+            textBoxCorreo.TabIndex = 9;
             // 
             // textBoxContraseña
             // 
@@ -220,6 +220,7 @@
             btnAgregarUsuario.TabIndex = 0;
             btnAgregarUsuario.Text = "Aceptar";
             btnAgregarUsuario.UseVisualStyleBackColor = false;
+            btnAgregarUsuario.Click += btnAgregarUsuario_Click;
             // 
             // btnSalir
             // 
@@ -258,7 +259,7 @@
         private TextBox textBoxNombre;
         private TextBox textBoxApellido;
         private TextBox textBoxDNI;
-        private TextBox textBoxCorre;
+        private TextBox textBoxCorreo;
         private TextBox textBoxContraseña;
         private TableLayoutPanel tableLayoutPanel1;
         private Button btnAgregarUsuario;

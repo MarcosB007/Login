@@ -8,6 +8,9 @@ namespace Login.Presentadores
 {
     public class AgregarUsuarioPresenter
     {
+        public void AgregarUsuario()
+        {
 
+        }
     }
 }
