@@ -20,7 +20,7 @@ namespace Login
 
                 if(result == DialogResult.OK)
                 {
-                    Application.Run(new PrincipalView());
+                    Application.Run(new RegistrarClienteView());
                 }
             }
 

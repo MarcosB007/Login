@@ -51,8 +51,8 @@
             // 
             tlBase.BackColor = SystemColors.ActiveBorder;
             tlBase.ColumnCount = 2;
-            tlBase.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.3208561F));
-            tlBase.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 79.6791458F));
+            tlBase.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.57754F));
+            tlBase.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 83.42246F));
             tlBase.Controls.Add(label1, 0, 0);
             tlBase.Controls.Add(lbNombre, 0, 1);
             tlBase.Controls.Add(lbApellido, 0, 2);
@@ -68,7 +68,7 @@
             tlBase.Dock = DockStyle.Fill;
             tlBase.Location = new Point(0, 0);
             tlBase.Name = "tlBase";
-            tlBase.RowCount = 8;
+            tlBase.RowCount = 9;
             tlBase.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
             tlBase.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tlBase.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
@@ -77,7 +77,8 @@
             tlBase.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tlBase.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tlBase.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            tlBase.Size = new Size(561, 269);
+            tlBase.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tlBase.Size = new Size(561, 292);
             tlBase.TabIndex = 0;
             // 
             // label1
@@ -101,10 +102,10 @@
             lbNombre.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbNombre.Location = new Point(3, 50);
             lbNombre.Name = "lbNombre";
-            lbNombre.Size = new Size(108, 30);
+            lbNombre.Size = new Size(87, 30);
             lbNombre.TabIndex = 1;
             lbNombre.Text = "Nombre";
-            lbNombre.TextAlign = ContentAlignment.MiddleRight;
+            lbNombre.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lbApellido
             // 
@@ -113,10 +114,10 @@
             lbApellido.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbApellido.Location = new Point(3, 80);
             lbApellido.Name = "lbApellido";
-            lbApellido.Size = new Size(108, 30);
+            lbApellido.Size = new Size(87, 30);
             lbApellido.TabIndex = 2;
             lbApellido.Text = "Apellido";
-            lbApellido.TextAlign = ContentAlignment.MiddleRight;
+            lbApellido.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lbDNI
             // 
@@ -125,10 +126,10 @@
             lbDNI.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbDNI.Location = new Point(3, 110);
             lbDNI.Name = "lbDNI";
-            lbDNI.Size = new Size(108, 30);
+            lbDNI.Size = new Size(87, 30);
             lbDNI.TabIndex = 3;
             lbDNI.Text = "DNI";
-            lbDNI.TextAlign = ContentAlignment.MiddleRight;
+            lbDNI.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lbCorreo
             // 
@@ -137,10 +138,10 @@
             lbCorreo.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbCorreo.Location = new Point(3, 140);
             lbCorreo.Name = "lbCorreo";
-            lbCorreo.Size = new Size(108, 30);
+            lbCorreo.Size = new Size(87, 30);
             lbCorreo.TabIndex = 4;
             lbCorreo.Text = "Correo";
-            lbCorreo.TextAlign = ContentAlignment.MiddleRight;
+            lbCorreo.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lbContraseña
             // 
@@ -149,49 +150,49 @@
             lbContraseña.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbContraseña.Location = new Point(3, 170);
             lbContraseña.Name = "lbContraseña";
-            lbContraseña.Size = new Size(108, 30);
+            lbContraseña.Size = new Size(87, 30);
             lbContraseña.TabIndex = 5;
             lbContraseña.Text = "Contraseña";
-            lbContraseña.TextAlign = ContentAlignment.MiddleRight;
+            lbContraseña.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // textBoxNombre
             // 
             textBoxNombre.Dock = DockStyle.Fill;
-            textBoxNombre.Location = new Point(117, 53);
+            textBoxNombre.Location = new Point(96, 53);
             textBoxNombre.Name = "textBoxNombre";
-            textBoxNombre.Size = new Size(441, 25);
+            textBoxNombre.Size = new Size(462, 25);
             textBoxNombre.TabIndex = 6;
             // 
             // textBoxApellido
             // 
             textBoxApellido.Dock = DockStyle.Fill;
-            textBoxApellido.Location = new Point(117, 83);
+            textBoxApellido.Location = new Point(96, 83);
             textBoxApellido.Name = "textBoxApellido";
-            textBoxApellido.Size = new Size(441, 25);
+            textBoxApellido.Size = new Size(462, 25);
             textBoxApellido.TabIndex = 7;
             // 
             // textBoxDNI
             // 
             textBoxDNI.Dock = DockStyle.Fill;
-            textBoxDNI.Location = new Point(117, 113);
+            textBoxDNI.Location = new Point(96, 113);
             textBoxDNI.Name = "textBoxDNI";
-            textBoxDNI.Size = new Size(441, 25);
+            textBoxDNI.Size = new Size(462, 25);
             textBoxDNI.TabIndex = 8;
             // 
             // textBoxCorre
             // 
             textBoxCorre.Dock = DockStyle.Fill;
-            textBoxCorre.Location = new Point(117, 143);
+            textBoxCorre.Location = new Point(96, 143);
             textBoxCorre.Name = "textBoxCorre";
-            textBoxCorre.Size = new Size(441, 25);
+            textBoxCorre.Size = new Size(462, 25);
             textBoxCorre.TabIndex = 9;
             // 
             // textBoxContraseña
             // 
             textBoxContraseña.Dock = DockStyle.Fill;
-            textBoxContraseña.Location = new Point(117, 173);
+            textBoxContraseña.Location = new Point(96, 173);
             textBoxContraseña.Name = "textBoxContraseña";
-            textBoxContraseña.Size = new Size(441, 25);
+            textBoxContraseña.Size = new Size(462, 25);
             textBoxContraseña.TabIndex = 10;
             // 
             // tableLayoutPanel1
@@ -202,20 +203,20 @@
             tableLayoutPanel1.Controls.Add(btnAgregarUsuario, 1, 0);
             tableLayoutPanel1.Controls.Add(btnSalir, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(117, 233);
+            tableLayoutPanel1.Location = new Point(96, 233);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(441, 44);
+            tableLayoutPanel1.Size = new Size(462, 44);
             tableLayoutPanel1.TabIndex = 11;
             // 
             // btnAgregarUsuario
             // 
             btnAgregarUsuario.BackColor = Color.LimeGreen;
             btnAgregarUsuario.Dock = DockStyle.Fill;
-            btnAgregarUsuario.Location = new Point(223, 3);
+            btnAgregarUsuario.Location = new Point(234, 3);
             btnAgregarUsuario.Name = "btnAgregarUsuario";
-            btnAgregarUsuario.Size = new Size(215, 38);
+            btnAgregarUsuario.Size = new Size(225, 38);
             btnAgregarUsuario.TabIndex = 0;
             btnAgregarUsuario.Text = "Aceptar";
             btnAgregarUsuario.UseVisualStyleBackColor = false;
@@ -226,7 +227,7 @@
             btnSalir.Dock = DockStyle.Fill;
             btnSalir.Location = new Point(3, 3);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(214, 38);
+            btnSalir.Size = new Size(225, 38);
             btnSalir.TabIndex = 1;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
@@ -235,7 +236,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(561, 269);
+            ClientSize = new Size(561, 292);
             Controls.Add(tlBase);
             Name = "RegistrarClienteView";
             Text = "RegistrarClienteView";
