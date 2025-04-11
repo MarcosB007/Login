@@ -12,7 +12,7 @@ namespace Login.Dominio
         public string Apellido { get; set; }
         public string DNI { get; set; }
         public string Correo { get; set; }
-        public string Contraseña { get; set; }
+        public int Edad { get; set; }
 
 
     }

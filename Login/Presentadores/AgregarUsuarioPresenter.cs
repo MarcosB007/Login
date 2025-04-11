@@ -10,37 +10,37 @@ namespace Login.Presentadores
 {
     public class AgregarUsuarioPresenter
     {
-        //private readonly Conexion conexion;
+        public AgregarUsuarioPresenter()
+        {
+        }
 
-        //public AgregarUsuarioPresenter()
-        //{
-        //}
+        public void AgregarUsuario(Usuario usuario)
+        {
+            string consulta = "INSERT INTO Clientes (Nombre, Apellido, Correo, DNI, Edad) VALUES (@Nombre, @Apellido, @Correo, @DNI, @Edad)";
 
-        //public AgregarUsuarioPresenter(Conexion conexion)
-        //{
-        //    this.conexion = conexion;
-        //}
-        //public void AgregarUsuario(Usuario usuario)
-        //{
-        //    string consulta = "INSERT INTO Usuarios (Nombre, Apellido, Correo, Contraseña) VALUES (@Nombre, @Apellido, @Correo, @Contraseña)";
+            if (Conexion.ConectarConDB())
+            {
+                try
+                {
+                    SqlCommand comando = new SqlCommand(consulta, Conexion.conexion);
+                    comando.Parameters.AddWithValue("@Nombre", usuario.Nombre);
+                    comando.Parameters.AddWithValue("@Apellido", usuario.Apellido);
+                    comando.Parameters.AddWithValue("@Correo", usuario.Correo);
+                    comando.Parameters.AddWithValue("@DNI", usuario.DNI);
+                    comando.Parameters.AddWithValue("@Edad", usuario.Edad);
 
-        //    if (conexion.ConectarConDB())
-        //    {
-        //        try
-        //        {
-        //            SqlCommand comando = new SqlCommand(consulta);
-        //            comando.Parameters.AddWithValue("@Nombre",usuario.Nombre);
-        //            comando.Parameters.AddWithValue("@Apellido", usuario.Apellido);
-        //            comando.Parameters.AddWithValue("@Correo", usuario.Correo);
-        //            comando.Parameters.AddWithValue("@Contraseña", usuario.Contraseña);
+                    comando.ExecuteNonQuery();
 
-        //        }
-        //        catch (Exception)
-        //        {
-
-        //            throw;
-        //        }
-        //    }
-        //}
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Error al cargar el cliente: {ex}");
+                }
+                finally
+                {
+                    Conexion.DesconectarDB();
+                }
+            }
+        }
     }
 }

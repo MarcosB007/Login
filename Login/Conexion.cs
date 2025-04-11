@@ -10,20 +10,20 @@ namespace Login
 {
     public static class Conexion
     {
+        public static SqlConnection conexion;
         public static bool ConectarConDB()
         {
             string cadenaDeConexion = "Server=MARCOS;Database=UsuariosDB;Integrated Security=True;";
 
             try
             {
-                using (SqlConnection conexion = new SqlConnection(cadenaDeConexion))
-                {
-                    conexion.Open();
-                    return true;
-                    //Console.WriteLine("Conexion exitosa.");
-                    //MessageBox.Show("Conexion exitosa");
-
-                }
+                
+                conexion = new SqlConnection(cadenaDeConexion);
+                conexion.Open();
+                return true;
+                //Console.WriteLine("Conexion exitosa.");
+                //MessageBox.Show("Conexion exitosa");
+                
             }
             catch (Exception ex) 
             {
@@ -32,5 +32,14 @@ namespace Login
                 return false;
             }
         }
+
+        public static void DesconectarDB()
+        {
+            if (conexion != null && conexion.State == System.Data.ConnectionState.Open)
+            {
+                conexion.Close();
+            }
+        }
+        
     }
 }

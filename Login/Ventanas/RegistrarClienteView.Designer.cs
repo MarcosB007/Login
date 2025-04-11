@@ -34,12 +34,12 @@
             lbApellido = new Label();
             lbDNI = new Label();
             lbCorreo = new Label();
-            lbContraseña = new Label();
+            lbEdad = new Label();
             textBoxNombre = new TextBox();
             textBoxApellido = new TextBox();
             textBoxDNI = new TextBox();
             textBoxCorreo = new TextBox();
-            textBoxContraseña = new TextBox();
+            textBoxEdad = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             btnAgregarUsuario = new Button();
             btnSalir = new Button();
@@ -58,12 +58,12 @@
             tlBase.Controls.Add(lbApellido, 0, 2);
             tlBase.Controls.Add(lbDNI, 0, 3);
             tlBase.Controls.Add(lbCorreo, 0, 4);
-            tlBase.Controls.Add(lbContraseña, 0, 5);
+            tlBase.Controls.Add(lbEdad, 0, 5);
             tlBase.Controls.Add(textBoxNombre, 1, 1);
             tlBase.Controls.Add(textBoxApellido, 1, 2);
             tlBase.Controls.Add(textBoxDNI, 1, 3);
             tlBase.Controls.Add(textBoxCorreo, 1, 4);
-            tlBase.Controls.Add(textBoxContraseña, 1, 5);
+            tlBase.Controls.Add(textBoxEdad, 1, 5);
             tlBase.Controls.Add(tableLayoutPanel1, 1, 7);
             tlBase.Dock = DockStyle.Fill;
             tlBase.Location = new Point(0, 0);
@@ -92,7 +92,7 @@
             label1.Name = "label1";
             label1.Size = new Size(555, 50);
             label1.TabIndex = 0;
-            label1.Text = "Registro de Usuarios";
+            label1.Text = "Registro de Clientes";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbNombre
@@ -143,17 +143,17 @@
             lbCorreo.Text = "Correo";
             lbCorreo.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // lbContraseña
+            // lbEdad
             // 
-            lbContraseña.AutoSize = true;
-            lbContraseña.Dock = DockStyle.Fill;
-            lbContraseña.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbContraseña.Location = new Point(3, 170);
-            lbContraseña.Name = "lbContraseña";
-            lbContraseña.Size = new Size(87, 30);
-            lbContraseña.TabIndex = 5;
-            lbContraseña.Text = "Contraseña";
-            lbContraseña.TextAlign = ContentAlignment.MiddleLeft;
+            lbEdad.AutoSize = true;
+            lbEdad.Dock = DockStyle.Fill;
+            lbEdad.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbEdad.Location = new Point(3, 170);
+            lbEdad.Name = "lbEdad";
+            lbEdad.Size = new Size(87, 30);
+            lbEdad.TabIndex = 5;
+            lbEdad.Text = "Edad";
+            lbEdad.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // textBoxNombre
             // 
@@ -187,13 +187,13 @@
             textBoxCorreo.Size = new Size(462, 25);
             textBoxCorreo.TabIndex = 9;
             // 
-            // textBoxContraseña
+            // textBoxEdad
             // 
-            textBoxContraseña.Dock = DockStyle.Fill;
-            textBoxContraseña.Location = new Point(96, 173);
-            textBoxContraseña.Name = "textBoxContraseña";
-            textBoxContraseña.Size = new Size(462, 25);
-            textBoxContraseña.TabIndex = 10;
+            textBoxEdad.Dock = DockStyle.Fill;
+            textBoxEdad.Location = new Point(96, 173);
+            textBoxEdad.Name = "textBoxEdad";
+            textBoxEdad.Size = new Size(462, 25);
+            textBoxEdad.TabIndex = 10;
             // 
             // tableLayoutPanel1
             // 
@@ -255,12 +255,12 @@
         private Label lbApellido;
         private Label lbDNI;
         private Label lbCorreo;
-        private Label lbContraseña;
+        private Label lbEdad;
         private TextBox textBoxNombre;
         private TextBox textBoxApellido;
         private TextBox textBoxDNI;
         private TextBox textBoxCorreo;
-        private TextBox textBoxContraseña;
+        private TextBox textBoxEdad;
         private TableLayoutPanel tableLayoutPanel1;
         private Button btnAgregarUsuario;
         private Button btnSalir;

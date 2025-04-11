@@ -15,10 +15,11 @@ namespace Login.Ventanas
 {
     public partial class RegistrarClienteView : Form
     {
-        AgregarUsuarioPresenter presentador = new AgregarUsuarioPresenter();
+        private AgregarUsuarioPresenter _presentador;
         public RegistrarClienteView()
         {
             InitializeComponent();
+            _presentador = new AgregarUsuarioPresenter();
         }
 
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
@@ -27,16 +28,16 @@ namespace Login.Ventanas
             string lastname = textBoxApellido.Text;
             string dni = textBoxDNI.Text;
             string correo = textBoxCorreo.Text;
-            string password = textBoxContraseña.Text;
+            string password = textBoxEdad.Text;
 
             Usuario usuario = new Usuario();
             usuario.Nombre = name;
             usuario.Apellido = lastname;
             usuario.DNI = dni;
             usuario.Correo = correo;
-            usuario.Contraseña = password;
+            usuario.Edad = int.Parse(password);
 
-            //presentador.AgregarUsuario(usuario);
+            _presentador.AgregarUsuario(usuario);
 
         }
     }

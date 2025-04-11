@@ -12,10 +12,6 @@ namespace Login
             _presentador = new ValidarUsuarioPresenter(this);
         }
 
-        //public bool Validar(string user, string password)
-        //{
-        //    throw new NotImplementedException();
-        //}
 
         private void btn_Conectar(object sender, EventArgs e)
         {
