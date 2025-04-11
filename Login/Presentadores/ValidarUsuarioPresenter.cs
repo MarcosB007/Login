@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace Login.Presentadores
 {
-    public class ValidarUsuarioPresenter: ILoginView
+    public class ValidarUsuarioPresenter
     {
+        public ValidarUsuarioPresenter(ILoginView vista)
+        {
+            
+        }
         public bool Validar(string user, string password)
         {
             string cadenaDeConexion = "Server=MARCOS;Database=UsuariosDB;Integrated Security=True;";

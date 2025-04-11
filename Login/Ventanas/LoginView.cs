@@ -3,14 +3,20 @@ using Login.Presentadores;
 
 namespace Login
 {
-    public partial class LoginView : Form
+    public partial class LoginView : Form, ILoginView
     {
-        ValidarUsuarioPresenter presentador = new ValidarUsuarioPresenter();
+        private ValidarUsuarioPresenter _presentador;
         public LoginView()
         {
             InitializeComponent();
+            _presentador = new ValidarUsuarioPresenter(this);
         }
-        
+
+        //public bool Validar(string user, string password)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         private void btn_Conectar(object sender, EventArgs e)
         {
             string usuario = tbUsuario.Text;
@@ -19,7 +25,7 @@ namespace Login
             bool resultadoConexion = Conexion.ConectarConDB();
             if (resultadoConexion)
             {
-                bool resultadoConsulta = presentador.Validar(usuario, contraseña);
+                bool resultadoConsulta = _presentador.Validar(usuario, contraseña);
                 if (resultadoConsulta)
                 {
                     this.DialogResult = DialogResult.OK;

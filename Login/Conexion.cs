@@ -8,9 +8,9 @@ using System.Data.SqlClient;
 
 namespace Login
 {
-    public class Conexion
+    public static class Conexion
     {
-        public bool ConectarConDB()
+        public static bool ConectarConDB()
         {
             string cadenaDeConexion = "Server=MARCOS;Database=UsuariosDB;Integrated Security=True;";
 

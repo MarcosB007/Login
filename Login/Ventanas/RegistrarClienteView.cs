@@ -36,7 +36,7 @@ namespace Login.Ventanas
             usuario.Correo = correo;
             usuario.Contraseña = password;
 
-            presentador.AgregarUsuario(usuario);
+            //presentador.AgregarUsuario(usuario);
 
         }
     }
