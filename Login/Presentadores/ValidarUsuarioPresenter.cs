@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Login.Presentadores
 {
-    public class ValidarUsuarioPresenter: IValidarUsuario
+    public class ValidarUsuarioPresenter: ILoginView
     {
         public bool Validar(string user, string password)
         {

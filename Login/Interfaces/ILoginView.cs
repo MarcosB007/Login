@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Login.Interfaces
 {
-    public interface IValidarUsuario
+    public interface ILoginView
     {
         bool Validar(string user, string password);
     }
